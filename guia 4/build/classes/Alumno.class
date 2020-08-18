@@ -1,0 +1,31 @@
+package hotel;
+
+import java.util.*;
+
+public class Administrador extends Persona {
+
+    private HashSet<Pasajero> clientes;
+    private HashSet<Administrador> administracion;
+    private String usuario;
+    private String contraseña;
+
+    public Administrador(String usuario, String contraseña, String nombre, String apellido) {
+        super(nombre, apellido);
+        this.clientes = clientes;
+        this.administracion = administracion;
+        this.usuario = usuario;
+        this.contraseña = contraseña;
+    }
+
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    protected Administrador ingresoSistemaAdministracion(String usuarios, String contraseña) {
+
+        if (administracion == null) {
+            return null;
+        }
+        for (Administrador person : administracion) {
+            if (person.getEmail().equals(usuarios) && person.getContraseña().equals(contraseña)) {
+                retur
